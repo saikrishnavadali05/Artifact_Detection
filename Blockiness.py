@@ -3,36 +3,41 @@ import cv2
 import subprocess
 BLOCK_ROWS = 8
 BLOCK_COLS = 8
-H O R I Z O NTAL_DIRECTION = 1
-VE RT IC AL_DIRECTION = 2
-B L O C K I N ES S _ L OW _ T H RE S H OL D = xxx
-B L O C K I N E S S _ H IG H _ T H R E S H O L D = xxx
+HORIZONTAL_DIRECTION = 1
+VERTICAL_DIRECTION = 2
+BLOCKINESS_LOW_THRESHOLD = xxx
+BLOCKINESS_HIGH_THRESHOLD = xxx
+
 class ArtifactedEdge :
-point1 = None
-point2 = None
-annoyance = None
-def __init__ ( self , point1 , point2 , annoyance ) :
-self . point1 = point1
-self . point2 = point2
-self . annoyance = annoyance
-def h i g h l i g h t _ i m a g e _ ar t i f a c t s ( image , artifacted_edges ) :
-for edge in artifacted_edges :
-cv2 . line ( image , edge . point1 , edge . point2 , (0 , 0 , 0) )
-def c o m p u t e _ o v e r a l l _ an n o y a n c e ( artifacted_edges ) :
-annoyance = 0
-if len ( artifacted_edges ) != 0:
-for edge in artifacted_edges :
-annoyance += edge . annoyance
-return annoyance / len ( artifacted_edges )
-else :
-return 0
+  point1 = None
+  point2 = None
+  annoyance = None
+  def __init__ ( self , point1 , point2 , annoyance ) :
+    self . point1 = point1
+    self . point2 = point2
+    self . annoyance = annoyance
+    
+def highlight_image_artifacts( image , artifacted_edges ) :
+  for edge in artifacted_edges :
+    cv2 . line ( image , edge . point1 , edge . point2 , (0 , 0 , 0) )
+
+def compute_overall_annoyance( artifacted_edges ) :
+  annoyance = 0
+  if len ( artifacted_edges ) != 0:
+    for edge in artifacted_edges :
+      annoyance += edge . annoyance
+    return annoyance / len ( artifacted_edges )
+  else :
+    return 0
+  
 def c o mpu te _e dge _a nn oya nc e ( first_block , second_block , direction ) :
-if direction == VERTICAL_DIRECTION :
-return np . average ( np . abs ( second_block [0:1 , 0: BLOCK_COLS ] -
+  if direction == VERTICAL_DIRECTION :
+    return np . average ( np . abs ( second_block [0:1 , 0: BLOCK_COLS ] -
 first_block [ BLOCK_ROWS -1: BLOCK_ROWS , 0: BLOCK_COLS ]) , axis =1)
 if direction == HORIZONTAL_DIRECTION :
 return np . average ( np . abs ( second_block [0: BLOCK_ROWS , 0:1] -
 first_block [0: BLOCK_ROWS , BLOCK_COLS -1: BLOCK_COLS ]) , axis =0)
+
 def h a s _l o w_ pi x el _ va ri a ti o n ( pixel , pixel_array , diff ) :
 for x in pixel_array :
 current_diff = np . abs ( pixel - x )
@@ -40,6 +45,7 @@ if not ( np . greater_equal ( current_diff , diff -3) . all () \
 and np . greater_equal ( diff +3 , current_diff ) . all () ) :
 return False
 return True
+
 def check_blockiness ( first_block , second_block , direction ) :
 total_blockiness = 0
 size = len ( first_block )
@@ -120,6 +126,7 @@ artifacted_edges . append ( ArtifactedEdge (( j * BLOCK_COLS , ( i +1) *
 BLOCK_ROWS ) , (( j +1) * BLOCK_COLS , ( i +1) * BLOCK_ROWS ) ,
 annoyance ) )
 return artifacted_edges
+
 def get_image_blocks ( image ) :
 blocks = []
 rows , cols , ch = image . shape
@@ -129,6 +136,7 @@ for j in xrange (0 , cols / BLOCK_COLS ) :
 blocks [ i ]. append ( image [ i * BLOCK_ROWS :( i +1) * BLOCK_ROWS , j *
 BLOCK_COLS :( j +1) * BLOCK_COLS ])
 return blocks
+
 def m easure_artifacts ( image_path , output_path ) :
 image = cv2 . imread ( image_path , 1)
 image_array = np . array ( image , dtype = np . int64 )
