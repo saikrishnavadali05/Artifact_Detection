@@ -23,7 +23,7 @@ class ArtifactedEdge :
     
 def highlight_image_artifacts( image , artifacted_edges ) :
   for edge in artifacted_edges :
-    cv2 . line ( image , edge . point1 , edge . point2 , (0 , 0 , 0) )
+    cv2.line( image , edge.point1 , edge.point2 , (0 , 0 , 0) )
 
 def compute_overall_annoyance( artifacted_edges ) :
   annoyance = 0
