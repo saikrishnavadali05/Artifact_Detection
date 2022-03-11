@@ -16,7 +16,7 @@ class ArtifactedEdge :
   point1 = None
   point2 = None
   annoyance = None
-  def __init__ ( self , point1 , point2 , annoyance ) :
+  def __init__ (self , point1 , point2 , annoyance) :
     self.point1 = point1
     self.point2 = point2
     self.annoyance = annoyance
