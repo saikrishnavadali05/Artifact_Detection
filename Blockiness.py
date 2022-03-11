@@ -17,9 +17,9 @@ class ArtifactedEdge :
   point2 = None
   annoyance = None
   def __init__ ( self , point1 , point2 , annoyance ) :
-    self . point1 = point1
-    self . point2 = point2
-    self . annoyance = annoyance
+    self.point1 = point1
+    self.point2 = point2
+    self.annoyance = annoyance
     
 def highlight_image_artifacts( image , artifacted_edges ) :
   for edge in artifacted_edges :
