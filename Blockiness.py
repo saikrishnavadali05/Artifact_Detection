@@ -1,10 +1,7 @@
-"""
-This code is extracted directly from the research paper.
-"""
 #code for Blockiness
 
 import numpy as np
-import cv2
+from cv2 import cv2
 
 BLOCK_ROWS = 8
 BLOCK_COLS = 8
@@ -34,7 +31,7 @@ def compute_overall_annoyance( artifacted_edges ) :
         return annoyance / len ( artifacted_edges )
     else :
         return 0
-  
+
 def compute_edge_annoyance(first_block , second_block , direction) :
     if direction == VERTICAL_DIRECTION :
         return np . average ( np . abs ( second_block [0:1 , 0: BLOCK_COLS ] -
@@ -122,7 +119,7 @@ def get_artifacted_edges(blocks) :
 
 def get_image_blocks (image) :
     blocks = []
-    rows , cols , ch = image.shape
+    rows , cols  = image.shape
     for i in range(0 , rows / BLOCK_ROWS):
         blocks.append ([])
         for j in range(0 , cols / BLOCK_COLS ) :
@@ -132,13 +129,13 @@ def get_image_blocks (image) :
 def measure_artifacts(image_path , output_path) :
     image = cv2.imread(image_path , 1)
     image_array = np.array(image , dtype = np . int64)
-    rows , cols , ch = image.shape
+    rows , cols  = image.shape
     blocks = get_image_blocks ( image_array )
     artifacted_edges = get_artifacted_edges ( blocks )
     annoyance_score = np . average(compute_overall_annoyance (artifacted_edges))
     print  ("Annoyance Score : %0.2 f ",annoyance_score)
-    total_artifacts_percentage = np . float_ ( len ( artifacted_edges ) ) / np .float_ ((( rows / BLOCK_ROWS ) *( cols / BLOCK_COLS ) *2) ) * 100
+    total_artifacts_percentage = np.float_(len(artifacted_edges))/np.float_(((rows/BLOCK_ROWS)*(cols/BLOCK_COLS)*2))*100
     print  ("Artifacted Edges: %0.2 f ",total_artifacts_percentage)
     highlight_image_artifacts ( image , artifacted_edges )
-    cv2 . imwrite ( output_path , image )
-    return ( total_artifacts_percentage , annoyance_score )
+    cv2.imwrite ( output_path , image )
+    return( total_artifacts_percentage , annoyance_score )
