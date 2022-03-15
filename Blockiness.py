@@ -14,37 +14,34 @@ class ArtifactedEdge:
     point1 = None
     point2 = None
     annoyance = None
-    def __init__ (self , point1 , point2 , annoyance) :
+    def __init__ (self, point1, point2, annoyance) :
         self.point1 = point1
         self.point2 = point2
         self.annoyance = annoyance
 
-def highlight_image_artifacts( image , artifacted_edges ) :
-    for edge in artifacted_edges :
-        cv2.line( image , edge.point1 , edge.point2 , (0 , 0 , 0) )
+def highlight_image_artifacts(image, artifacted_edges):
+    for edge in artifacted_edges:
+        cv2.line(image, edge.point1, edge.point2, (0, 0, 0))
 
-def compute_overall_annoyance( artifacted_edges ) :
+def compute_overall_annoyance(artifacted_edges):
     annoyance = 0
-    if len ( artifacted_edges ) != 0:
+    if len(artifacted_edges) != 0:
         for edge in artifacted_edges :
-            annoyance += edge . annoyance
-        return annoyance / len ( artifacted_edges )
+            annoyance += edge.annoyance
+        return annoyance/len(artifacted_edges)
     else :
         return 0
 
-def compute_edge_annoyance(first_block , second_block , direction) :
-    if direction == VERTICAL_DIRECTION :
-        return np . average ( np . abs ( second_block [0:1 , 0: BLOCK_COLS ] -
-      first_block [ BLOCK_ROWS -1: BLOCK_ROWS , 0: BLOCK_COLS ]) , axis =1)
+def compute_edge_annoyance(first_block, second_block, direction):
+    if direction == VERTICAL_DIRECTION:
+        return np.average(np.abs(second_block[0:1, 0:BLOCK_COLS] - first_block[BLOCK_ROWS-1:BLOCK_ROWS, 0:BLOCK_COLS]), axis=1)
     if direction == HORIZONTAL_DIRECTION :
-        return np . average ( np . abs ( second_block [0: BLOCK_ROWS , 0:1] -
-      first_block [0: BLOCK_ROWS , BLOCK_COLS -1: BLOCK_COLS ]) , axis =0)
+        return np.average(np.abs(second_block[0:BLOCK_ROWS, 0:1] - first_block[0:BLOCK_ROWS, BLOCK_COLS-1:BLOCK_COLS]), axis=0)
 
-def has_low_pixel_variation(pixel , pixel_array , diff) :
-    for x in pixel_array :
-        current_diff = np . abs ( pixel - x )
-        if not ( np . greater_equal ( current_diff , diff -3) . all () \
-      and np . greater_equal ( diff +3 , current_diff ) . all () ) :
+def has_low_pixel_variation(pixel, pixel_array, diff):
+    for x in pixel_array:
+        current_diff = np.abs(pixel-x)
+        if not(np.greater_equal(current_diff, diff-3).all() and np.greater_equal(diff+3, current_diff).all()):
             return False
     return True
 
@@ -54,52 +51,41 @@ def check_blockiness(first_block, second_block, direction):
     blockinesses = []
     for x in range(0, size):
         current_blockiness = 0
+
         if direction == VERTICAL_DIRECTION :
             boundary_slope = np.abs(second_block[0][x] - first_block[size-1][x])
-            if not has_low_pixel_variation(first_block[size-1][x],
-        second_block[0:size-1, x:x+1] , boundary_slope) \
-          or not has_low_pixel_variation(second_block[0][x],
-            first_block[0:size-1, x:x+1] , boundary_slope ) :
+            
+            if not has_low_pixel_variation(first_block[size-1][x], second_block[0:size-1, x:x+1] , boundary_slope) or not has_low_pixel_variation(second_block[0][x], first_block[0:size-1, x:x+1], boundary_slope):
                 return False
-            first_slope = np . abs ( first_block [ size -1][ x ] - first_block [ size -2][ x ])
-            second_slope = np . abs ( second_block [1][ x ] - second_block [0][ x ])
-            current_blockiness = boundary_slope - np . float_ ( first_slope +second_slope ) /2
-        elif direction == HORIZONTAL_DIRECTION :
-            boundary_slope = np . abs ( second_block [ x ][0] - first_block [ x ][ size-1])
-            if not has_low_pixel_variation( first_block [ x ][ size -1] ,
-        second_block [ x : x +1 , 0: size -1] , boundary_slope ) \
-          or not has_low_pixel_variation( second_block [ x ][0] ,
-            second_block [ x : x +1 , 0: size -1] , boundary_slope ) :
+            
+            first_slope = np.abs(first_block[size-1][x] - first_block[size-2][x])
+            second_slope = np.abs(second_block [1][x] - second_block [0][x])
+            current_blockiness = boundary_slope - np.float_(first_slope+second_slope)/2
+
+        elif direction == HORIZONTAL_DIRECTION:
+            boundary_slope = np.abs(second_block[x][0] - first_block[x][size-1])
+            
+            if not has_low_pixel_variation(first_block[x][size-1], second_block [x:x+1, 0:size-1], boundary_slope) or not has_low_pixel_variation(second_block[x][0], second_block [x:x+1, 0:size-1], boundary_slope):
                 return False
+            
             first_slope = np.abs(first_block[x][size -1] - first_block[ x ][size -2])
             second_slope = np.abs( second_block [ x ][1] - second_block [ x ][0])
             current_blockiness = boundary_slope-np.float_(first_slope+second_slope)/2
 
-        if np.greater(BLOCKINESS_LOW_THRESHOLD,np.float_( current_blockiness
-        ) ) . all () \
-              or np.greater( np.float_(current_blockiness) ,
-                  BLOCKINESS_HIGH_THRESHOLD ) . all () :
+        if np.greater(BLOCKINESS_LOW_THRESHOLD, np.float_(current_blockiness)).all() or np.greater(np.float_(current_blockiness), BLOCKINESS_HIGH_THRESHOLD).all() :
             return False
 
         total_blockiness += current_blockiness
         blockinesses.append(current_blockiness)
-    total_blockiness = np . float_ (total_blockiness)/np.float_(size)
+
+    total_blockiness = np.float_(total_blockiness)/np.float_(size)
     for b in blockinesses :
-        if np.greater( np.abs(total_blockiness - b),2).any() :
+        if np.greater(np.abs(total_blockiness-b), 2).any() :
             return False
 
-    blocked = (BLOCKINESS_HIGH_THRESHOLD<= total_blockiness [0] <=
-    BLOCKINESS_HIGH_THRESHOLD\
-      and total_blockiness [1] <= BLOCKINESS_HIGH_THRESHOLD\
-      and total_blockiness [2] <= BLOCKINESS_HIGH_THRESHOLD)\
-        or (BLOCKINESS_LOW_THRESHOLD<= total_blockiness [1] <=
-            BLOCKINESS_HIGH_THRESHOLD\
-            and total_blockiness [0] <= BLOCKINESS_HIGH_THRESHOLD\
-           and total_blockiness [2] <= BLOCKINESS_HIGH_THRESHOLD) \
-        or (BLOCKINESS_LOW_THRESHOLD <= total_blockiness [2] <=
-            BLOCKINESS_HIGH_THRESHOLD\
-            and total_blockiness [0] <= BLOCKINESS_HIGH_THRESHOLD\
-            and total_blockiness [1] <= BLOCKINESS_HIGH_THRESHOLD)
+    blocked = (BLOCKINESS_HIGH_THRESHOLD<= total_blockiness [0] <= BLOCKINESS_HIGH_THRESHOLD and total_blockiness [1] <= BLOCKINESS_HIGH_THRESHOLD and total_blockiness [2] <= BLOCKINESS_HIGH_THRESHOLD) \
+        or (BLOCKINESS_LOW_THRESHOLD<= total_blockiness [1] <= BLOCKINESS_HIGH_THRESHOLD and total_blockiness [0] <= BLOCKINESS_HIGH_THRESHOLD and total_blockiness [2] <= BLOCKINESS_HIGH_THRESHOLD) \
+        or (BLOCKINESS_LOW_THRESHOLD <= total_blockiness [2] <= BLOCKINESS_HIGH_THRESHOLD and total_blockiness [0] <= BLOCKINESS_HIGH_THRESHOLD and total_blockiness [1] <= BLOCKINESS_HIGH_THRESHOLD)
     return blocked
 
 
