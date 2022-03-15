@@ -40,9 +40,8 @@ def compute_edge_annoyance(first_block, second_block, direction):
 
 def has_low_pixel_variation(pixel, pixel_array, diff):
     for x in pixel_array:
-        current_diff = np . abs ( pixel - x )
-        if not ( np . greater_equal ( current_diff , diff -3) . all () \
-      and np . greater_equal ( diff +3 , current_diff ) . all () ) :
+        current_diff = np.abs(pixel-x)
+        if not(np.greater_equal(current_diff, diff-3).all() and np.greater_equal(diff+3, current_diff).all()):
             return False
     return True
 
