@@ -14,7 +14,7 @@ class ArtifactedEdge:
     point1 = None
     point2 = None
     annoyance = None
-    def __init__ (self , point1 , point2 , annoyance) :
+    def __init__ (self, point1, point2, annoyance) :
         self.point1 = point1
         self.point2 = point2
         self.annoyance = annoyance
@@ -51,52 +51,41 @@ def check_blockiness(first_block, second_block, direction):
     blockinesses = []
     for x in range(0, size):
         current_blockiness = 0
+
         if direction == VERTICAL_DIRECTION :
             boundary_slope = np.abs(second_block[0][x] - first_block[size-1][x])
-            if not has_low_pixel_variation(first_block[size-1][x],
-        second_block[0:size-1, x:x+1] , boundary_slope) \
-          or not has_low_pixel_variation(second_block[0][x],
-            first_block[0:size-1, x:x+1] , boundary_slope ) :
+            
+            if not has_low_pixel_variation(first_block[size-1][x], second_block[0:size-1, x:x+1] , boundary_slope) or not has_low_pixel_variation(second_block[0][x], first_block[0:size-1, x:x+1], boundary_slope):
                 return False
-            first_slope = np . abs ( first_block [ size -1][ x ] - first_block [ size -2][ x ])
-            second_slope = np . abs ( second_block [1][ x ] - second_block [0][ x ])
-            current_blockiness = boundary_slope - np . float_ ( first_slope +second_slope ) /2
-        elif direction == HORIZONTAL_DIRECTION :
-            boundary_slope = np . abs ( second_block [ x ][0] - first_block [ x ][ size-1])
-            if not has_low_pixel_variation( first_block [ x ][ size -1] ,
-        second_block [ x : x +1 , 0: size -1] , boundary_slope ) \
-          or not has_low_pixel_variation( second_block [ x ][0] ,
-            second_block [ x : x +1 , 0: size -1] , boundary_slope ) :
+            
+            first_slope = np.abs(first_block[size-1][x] - first_block[size-2][x])
+            second_slope = np.abs(second_block [1][x] - second_block [0][x])
+            current_blockiness = boundary_slope - np.float_(first_slope+second_slope)/2
+
+        elif direction == HORIZONTAL_DIRECTION:
+            boundary_slope = np.abs(second_block[x][0] - first_block[x][size-1])
+            
+            if not has_low_pixel_variation(first_block[x][size-1], second_block [x:x+1, 0:size-1], boundary_slope) or not has_low_pixel_variation(second_block[x][0], second_block [x:x+1, 0:size-1], boundary_slope):
                 return False
+            
             first_slope = np.abs(first_block[x][size -1] - first_block[ x ][size -2])
             second_slope = np.abs( second_block [ x ][1] - second_block [ x ][0])
             current_blockiness = boundary_slope-np.float_(first_slope+second_slope)/2
 
-        if np.greater(BLOCKINESS_LOW_THRESHOLD,np.float_( current_blockiness
-        ) ) . all () \
-              or np.greater( np.float_(current_blockiness) ,
-                  BLOCKINESS_HIGH_THRESHOLD ) . all () :
+        if np.greater(BLOCKINESS_LOW_THRESHOLD, np.float_(current_blockiness)).all() or np.greater(np.float_(current_blockiness), BLOCKINESS_HIGH_THRESHOLD).all() :
             return False
 
         total_blockiness += current_blockiness
         blockinesses.append(current_blockiness)
-    total_blockiness = np . float_ (total_blockiness)/np.float_(size)
+
+    total_blockiness = np.float_(total_blockiness)/np.float_(size)
     for b in blockinesses :
-        if np.greater( np.abs(total_blockiness - b),2).any() :
+        if np.greater(np.abs(total_blockiness-b), 2).any() :
             return False
 
-    blocked = (BLOCKINESS_HIGH_THRESHOLD<= total_blockiness [0] <=
-    BLOCKINESS_HIGH_THRESHOLD\
-      and total_blockiness [1] <= BLOCKINESS_HIGH_THRESHOLD\
-      and total_blockiness [2] <= BLOCKINESS_HIGH_THRESHOLD)\
-        or (BLOCKINESS_LOW_THRESHOLD<= total_blockiness [1] <=
-            BLOCKINESS_HIGH_THRESHOLD\
-            and total_blockiness [0] <= BLOCKINESS_HIGH_THRESHOLD\
-           and total_blockiness [2] <= BLOCKINESS_HIGH_THRESHOLD) \
-        or (BLOCKINESS_LOW_THRESHOLD <= total_blockiness [2] <=
-            BLOCKINESS_HIGH_THRESHOLD\
-            and total_blockiness [0] <= BLOCKINESS_HIGH_THRESHOLD\
-            and total_blockiness [1] <= BLOCKINESS_HIGH_THRESHOLD)
+    blocked = (BLOCKINESS_HIGH_THRESHOLD<= total_blockiness [0] <= BLOCKINESS_HIGH_THRESHOLD and total_blockiness [1] <= BLOCKINESS_HIGH_THRESHOLD and total_blockiness [2] <= BLOCKINESS_HIGH_THRESHOLD) \
+        or (BLOCKINESS_LOW_THRESHOLD<= total_blockiness [1] <= BLOCKINESS_HIGH_THRESHOLD and total_blockiness [0] <= BLOCKINESS_HIGH_THRESHOLD and total_blockiness [2] <= BLOCKINESS_HIGH_THRESHOLD) \
+        or (BLOCKINESS_LOW_THRESHOLD <= total_blockiness [2] <= BLOCKINESS_HIGH_THRESHOLD and total_blockiness [0] <= BLOCKINESS_HIGH_THRESHOLD and total_blockiness [1] <= BLOCKINESS_HIGH_THRESHOLD)
     return blocked
 
 
