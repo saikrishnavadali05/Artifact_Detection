@@ -7,3 +7,5 @@
 2. Doc Strings have to be included whereever possible within the code.
 3. Setup logging through out the program.
 4. Include sample images within the repo for testing the code.
+5. common functions should be written seperate file.
+6. code has to be executed in a faster way.
