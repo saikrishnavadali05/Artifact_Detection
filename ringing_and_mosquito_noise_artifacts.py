@@ -11,21 +11,21 @@ T_FLAT = True
 T_TEX =  False
 
 class ArtifactedBlock:
-    """this is a constructor"""
+    """It assigns values to the variables x,y and annoyance."""
     def __init__(self,x_coord,y_coord,annoyance):
         self.x = x_coord
         self.y = y_coord
         self.annoyance = annoyance
 
 def highlight_image_artifacts(image,artifacted_blocks):
-    """used for highlighting artifacts on image."""
+    """It is used for highlighting the artifacts on the image."""
     for block in artifacted_blocks:
         start_point = block.y*BLOCK_COLS,block.x*BLOCK_ROWS
         end_point = (block.y+1)*BLOCK_COLS,(block.x+1)*BLOCK_ROWS
         cv2.rectangle (image,start_point,end_point,(0,0,0))
 
 def compute_overall_annoyance(artifacted_blocks):
-    """calculating the total visibility of the image"""
+    """Calculating the total visibility of the image and return the values as int type."""
     annoyance = 0
     if len(artifacted_blocks) != 0:
         for block in artifacted_blocks:
@@ -35,7 +35,7 @@ def compute_overall_annoyance(artifacted_blocks):
         return 0
 
 def check_if_artifacted (blocks_sads):
-    """conditions to satisfy whether block is artifacted"""
+    """The conditions to label a region"""
     F = blocks_sads < T_FLAT
     T = blocks_sads > T_TEX
     flat_top = (all(F[0][0]) and all(F[0][1])) or (all(F[0][1]) and all(F[0][2]))
@@ -53,7 +53,7 @@ def check_if_artifacted (blocks_sads):
     return artifacted
 
 def check_artifacted_blocks (blocks_sads_map):
-    """#checking for the artifacted blocks"""
+    """checking for the artifacted blocks"""
     artifacted_blocks =[]
     for i in range(1,len(blocks_sads_map )-1):
         for j in range(1,len(blocks_sads_map[i])-1):
@@ -63,15 +63,16 @@ def check_artifacted_blocks (blocks_sads_map):
     return artifacted_blocks
 
 def compute_sad_for_block(block):
-    """Sum of Absolute Differences and Detection Kernel-1 for single block"""
+    """Computing sum of Absolute Differences for each block"""
     sad = 0
     for i in range(0,BLOCK_ROWS -1) :
         for j in range (0,BLOCK_COLS-1) :
             sad += np.abs(block[i][j] - block[i+1][j]) + np.abs(block[i][j]- block[i][j+1])
+        type(sad)
     return sad
 
 def compute_blocks_sad(blocks):
-    """Sum of Absolute Differences and Detection Kernel-2 for blocks"""
+    """Computing sum of Absolute Differences for blocks."""
     blocks_sads = np.array([[[0,0,0]for x in range(len(blocks[0]))]for x in range(len(blocks))])
     for i in range(0,len(blocks)):
         for j in range(0,len(blocks[i])):
@@ -79,7 +80,7 @@ def compute_blocks_sad(blocks):
     return blocks_sads
 
 def get_image_blocks(image,rows,cols):
-    """getting the block from image"""
+    """Getting the block from the image."""
     blocks = []
     for i in range(0,int (rows / BLOCK_ROWS)):
         blocks.append([])
@@ -88,7 +89,8 @@ def get_image_blocks(image,rows,cols):
     return blocks
 
 def measure_artifacts(image_path,output_path):
-    """main function to call all functions"""
+    """The Main function to call all functions and returns total_artifacts_percentage,
+    annoyance_score."""
     image = cv2.imread(image_path)
     image_array = np.array(image,dtype =np.int64)
     print("reading image "+ image_path)
@@ -106,5 +108,5 @@ def measure_artifacts(image_path,output_path):
     return (total_artifacts_percentage,annoyance_score)
 
 image_output = measure_artifacts(
-    r"C:\Users\Vissamsetty Bharath\Documents\project_python\image-022.jpg"
-    ,r"C:\Users\Vissamsetty Bharath\Documents\project_python\test_write.jpg")
+    r"C:\Users\Vissamsetty Bharath\Documents\project_python\image-016.jpg"
+    ,r"C:\Users\Vissamsetty Bharath\Documents\project_python\output.jpg")
