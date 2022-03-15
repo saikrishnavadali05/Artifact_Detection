@@ -19,29 +19,27 @@ class ArtifactedEdge:
         self.point2 = point2
         self.annoyance = annoyance
 
-def highlight_image_artifacts( image , artifacted_edges ) :
-    for edge in artifacted_edges :
-        cv2.line( image , edge.point1 , edge.point2 , (0 , 0 , 0) )
+def highlight_image_artifacts(image, artifacted_edges):
+    for edge in artifacted_edges:
+        cv2.line(image, edge.point1, edge.point2, (0, 0, 0))
 
-def compute_overall_annoyance( artifacted_edges ) :
+def compute_overall_annoyance(artifacted_edges):
     annoyance = 0
-    if len ( artifacted_edges ) != 0:
+    if len(artifacted_edges) != 0:
         for edge in artifacted_edges :
-            annoyance += edge . annoyance
-        return annoyance / len ( artifacted_edges )
+            annoyance += edge.annoyance
+        return annoyance/len(artifacted_edges)
     else :
         return 0
 
-def compute_edge_annoyance(first_block , second_block , direction) :
-    if direction == VERTICAL_DIRECTION :
-        return np . average ( np . abs ( second_block [0:1 , 0: BLOCK_COLS ] -
-      first_block [ BLOCK_ROWS -1: BLOCK_ROWS , 0: BLOCK_COLS ]) , axis =1)
+def compute_edge_annoyance(first_block, second_block, direction):
+    if direction == VERTICAL_DIRECTION:
+        return np.average(np.abs(second_block[0:1, 0:BLOCK_COLS] - first_block[BLOCK_ROWS-1:BLOCK_ROWS, 0:BLOCK_COLS]), axis=1)
     if direction == HORIZONTAL_DIRECTION :
-        return np . average ( np . abs ( second_block [0: BLOCK_ROWS , 0:1] -
-      first_block [0: BLOCK_ROWS , BLOCK_COLS -1: BLOCK_COLS ]) , axis =0)
+        return np.average(np.abs(second_block[0:BLOCK_ROWS, 0:1] - first_block[0:BLOCK_ROWS, BLOCK_COLS-1:BLOCK_COLS]), axis=0)
 
-def has_low_pixel_variation(pixel , pixel_array , diff) :
-    for x in pixel_array :
+def has_low_pixel_variation(pixel, pixel_array, diff):
+    for x in pixel_array:
         current_diff = np . abs ( pixel - x )
         if not ( np . greater_equal ( current_diff , diff -3) . all () \
       and np . greater_equal ( diff +3 , current_diff ) . all () ) :
