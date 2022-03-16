@@ -27,3 +27,12 @@
 * Constraints
   - to reduce to the amount of false positives
   - Absolute Diff of slope of all n tuples should not have larger deviation two(along the SAD - Sum of absolute difference)
+
+
+# Blockiness Algorithm
+1. Consider Image
+2. Split image into blocks
+3. Compute artifacts from blocks, Edges are being computed.
+4. Apply constraints on those blocks
+5. Quantization of artifacts
+6. Drawing Lines
