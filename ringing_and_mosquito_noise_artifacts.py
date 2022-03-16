@@ -96,8 +96,12 @@ def measure_artifacts(image_path,output_path):
     print("reading image "+ image_path)
     rows,cols,char = image.shape
     blocks = get_image_blocks(image_array,rows,cols)
+    #blocks_sads = compute_sad_for_block(blocks)
     blocks_sads = compute_blocks_sad(blocks)
+    print(blocks_sads)
+    """
     artifacted_blocks = check_artifacted_blocks(blocks_sads)
+    #print(artifacted_blocks)
     annoyance_score = np.average(compute_overall_annoyance(artifacted_blocks))
     print ('Annoyance Score:',f'{annoyance_score:.2f}')
     total_artifacts_percentage = np.float_(len(artifacted_blocks)) / np.float_((rows / BLOCK_ROWS)
@@ -105,6 +109,7 @@ def measure_artifacts(image_path,output_path):
     print ('Artifacted Edges:',f'{total_artifacts_percentage:.2f}')
     highlight_image_artifacts(image,artifacted_blocks)
     cv2.imwrite(output_path,image)
+    """
     return (total_artifacts_percentage,annoyance_score)
 
 image_output = measure_artifacts(
