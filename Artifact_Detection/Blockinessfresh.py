@@ -79,6 +79,6 @@ def measure_artifacts(img):
         blocks = get_image_blocks(img_array)
         artifacted_edges = get_artifacted_edges(blocks)
 
-
-img = Image.open('test.jpeg')
-measure_artifacts(img)
+if __name__ == "__main__" :
+        img = Image.open('test.jpeg')
+        measure_artifacts(img)
