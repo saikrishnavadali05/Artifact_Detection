@@ -1,6 +1,7 @@
-from PIL import Image
 import cv2
+from difflib import diff_bytes
 import numpy as np
+from PIL import Image
 
 #global varibles
 block_rows = 8
@@ -34,7 +35,9 @@ def compute_overall_annoyance(artifacted_edges):
 def has_low_pixel_variation(pixel,pixel_array,diff):
         for x in pixel_array:
                 current_diff = np.abs(pixel-x)
-                #TOBECODED 
+                if not (np.greater_equal(current_diff,diff-3).all() and np.greater_equal(diff+3,current_diff).all()):
+                        return False
+        return True
 
 def compute_edge_annoyance(first_block,second_block,direction):
         if direction == verticle:
