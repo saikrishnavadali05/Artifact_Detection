@@ -11,6 +11,7 @@
 6. code has to be executed in a faster way.
 7. Acknowledge the research paper and research work.
 8. Upload the paper pdf here.
+9. Tabs and Spaces should be consistent in both the files - Blockiness, Ringing
 
 # Key Concepts
 1. JPEG Compression
