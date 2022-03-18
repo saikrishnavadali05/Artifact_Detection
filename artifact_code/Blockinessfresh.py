@@ -125,8 +125,7 @@ def get_image_blocks(image):
                         blocks[i].append(image[i*block_rows:(i+1)*block_rows,j*block_cols:(j+1)*block_cols])
         return blocks
 
-if __name__ == "__main__" :
-        img = Image.open('test.jpeg')
+def measure_artifacts(img):
         img_array = np.array(img)
         rows,cols,ch = img_array.shape
         blocks = get_image_blocks(img_array)
@@ -143,3 +142,7 @@ if __name__ == "__main__" :
 
         return(total_artifacts_percentage,annoyance_score)
 
+
+if __name__ == "__main__" :
+        img = Image.open('test.jpeg')
+        measure_artifacts(img)
