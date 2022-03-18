@@ -4,7 +4,6 @@ from cv2 import cv2
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import common_functions
-import logging
 
 
 """Constant values that can be used in this program."""
@@ -29,8 +28,8 @@ def compute_sad_for_block(block):
     sad2= 0
     for i in range(0,BLOCK_ROWS -1) :
         for j in range (0,BLOCK_COLS-1) :
-            sad1 = np.abs(block[0][0] - block[1][0]) 
-            sad2 = np.abs(block[0][0] - block[0][1])
+            sad1 = np.abs(block[i][j] - block[i+1][j]) 
+            sad2 = np.abs(block[i][j] - block[i][j+1])
             sad += sad1 + sad2
     return sad
 
@@ -38,7 +37,7 @@ def compute_blocks_sad(blocks):
 
     """This line "blocks_sads" I converted to the easy way by splitting """
     blocks_sads = np.array([[[0,0,0] for x in range(len(blocks[0]))] for x in range(len(blocks))])
-    print(blocks_sads.shape)
+    #print(blocks_sads.shape)
 
     """This is the converted version of the above line everything is good but the dimensions are not matching"""
     """
@@ -77,7 +76,7 @@ def check_if_artifacted (blocks_sads):
 def check_artifacted_blocks (blocks_sads_map):
     """checking for the artifacted blocks"""
     artifacted_blocks =[]
-    len_rows =  len(blocks_sads_map )-1
+    len_rows =  len(blocks_sads_map)-1
     for i in range(1,len_rows):
         for j in range(1,len(blocks_sads_map[i])-1):
             if check_if_artifacted(blocks_sads_map[i-1:i+2,j -1:j+2]):
@@ -100,22 +99,28 @@ if __name__ == '__main__':
     print("reading image from source path"+ image_input_path)
     image = cv2.imread(image_input_path, cv2.IMREAD_COLOR)
     RGB_img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    common_functions.logg('Read the image')
     image_array = np.array(RGB_img,dtype =np.int64)
-    print(image_array.shape)
+    #print(image_array.shape)
     rows,cols,char = image.shape
     blocks = common_functions.get_image_blocks(image_array , rows , cols)
-    #print(blocks[0][2])
-    #print(np.array(blocks[0][2]).shape)
+    #print(blocks)
+    #print(np.array(blocks).shape)
+    common_functions.logg('executed get_image_blocks function')
     blocks_sads = compute_blocks_sad(blocks)
+    print(blocks_sads)
+    print(blocks_sads.shape)
+    common_functions.logg('executed compute_blocks_sad function')
     artifacted_blocks = check_artifacted_blocks  (blocks_sads)
-    #print(artifacted_blocks)
-    #print(blocks_sads)
+    common_functions.logg('executed check_artifacted_blocks function')
+    common_functions.logg('output the values of Annoyance Score and Artifacted Edges')
     annoyance_score = np.average(common_functions.compute_overall_annoyance(artifacted_blocks))
     print ('Annoyance Score:',f'{annoyance_score:.2f}')
     total_artifacts_percentage = np.float_(len(artifacted_blocks)) / np.float_((rows / BLOCK_ROWS)
     *( cols / BLOCK_COLS))*100
     print ('Artifacted Edges:',f'{total_artifacts_percentage:.2f}')
     highlight_image_artifacts(image,artifacted_blocks)
+    common_functions.logg('writing image into output file')
     cv2.imwrite(image_output_path,image)
 
 
