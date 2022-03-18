@@ -1,7 +1,9 @@
-import cv2
 from difflib import diff_bytes
-import numpy as np
 from PIL import Image
+
+import cv2
+import numpy as np
+
 
 #global varibles
 block_rows = 8
@@ -20,6 +22,7 @@ class ArtifactedEdge:
                 self.point = point1
                 self.point = point2
                 self.annoyance = annoyance
+
 
 def highlight_image_artifacts(img,artifacted_edges):
         for edge in artifacted_edges:
@@ -125,8 +128,11 @@ def get_image_blocks(image):
                         blocks[i].append(image[i*block_rows:(i+1)*block_rows,j*block_cols:(j+1)*block_cols])
         return blocks
 
-def measure_artifacts(img):
-        img_array = np.array(img)
+if __name__ == "__main__" :
+        img = Image.open('test.jpeg')
+        measure_artifacts(img)
+		
+		img_array = np.array(img)
         rows,cols,ch = img_array.shape
         blocks = get_image_blocks(img_array)
         artifacted_edges = get_artifacted_edges(blocks)
@@ -142,7 +148,3 @@ def measure_artifacts(img):
 
         return(total_artifacts_percentage,annoyance_score)
 
-
-if __name__ == "__main__" :
-        img = Image.open('test.jpeg')
-        measure_artifacts(img)
