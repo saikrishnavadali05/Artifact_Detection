@@ -27,6 +27,7 @@ def highlight_image_artifacts(img,artifacted_edges):
 
 def compute_overall_annoyance(artifacted_edges):
         annoyance = 0
+        print(artifacted_edges)
         if len(artifacted_edges) != 0:
                 for edge in artifacted_edges:
                         annoyance += edge.annoyance
@@ -129,6 +130,18 @@ def measure_artifacts(img):
         rows,cols,ch = img_array.shape
         blocks = get_image_blocks(img_array)
         artifacted_edges = get_artifacted_edges(blocks)
+
+        annoyance_score = np.average(compute_overall_annoyance(artifacted_edges))
+        print(annoyance_score)
+
+        total_artifacts_percentage = np.float_(len(artifacted_edges))/np.float_(((rows/block_rows)*(cols/block_cols)*2))*100
+        print(total_artifacts_percentage)
+
+        highlight_image_artifacts(img,artifacted_edges)
+        cv2.imwrite("Desktop/SWAMIwork/Artifact_Detection/output",img)
+
+        return(total_artifacts_percentage,annoyance_score)
+
 
 if __name__ == "__main__" :
         img = Image.open('test.jpeg')
