@@ -57,8 +57,8 @@ def check_blockiness(first_block,second_block,direction):
                 current_blockiness = 0
                 if direction == verticle:
                         boundary_slope = np.abs(second_block[0][x]-first_block[size-1][x])
-                        if not has_low_pixel_variation(first_block[size-1][x],second_block[0:size-1,x:x+1],boundary_slope\
-                                or not has_low_pixel_variation(second_block[0][x],first_block[0:size-1,x:x+1],boundary_slope)):
+                        if not has_low_pixel_variation(first_block[size-1][x],second_block[0:size-1,x:x+1],boundary_slope)\
+                                or not has_low_pixel_variation(second_block[0][x],first_block[0:size-1,x:x+1],boundary_slope):
                                 return False
                 
                         first_slope = np.abs(first_block[size-1][x] - first_block[size-2][x])
