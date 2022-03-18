@@ -130,10 +130,8 @@ def get_image_blocks(image):
 
 if __name__ == "__main__" :
         img = Image.open('test.jpeg')
-        measure_artifacts(img)
-		
-		img_array = np.array(img)
-        rows,cols,ch = img_array.shape
+	img_array = np.array(img)
+        rows, cols, ch = img_array.shape
         blocks = get_image_blocks(img_array)
         artifacted_edges = get_artifacted_edges(blocks)
 
@@ -143,7 +141,7 @@ if __name__ == "__main__" :
         total_artifacts_percentage = np.float_(len(artifacted_edges))/np.float_(((rows/block_rows)*(cols/block_cols)*2))*100
         print(total_artifacts_percentage)
 
-        highlight_image_artifacts(img,artifacted_edges)
+        highlight_image_artifacts(img, artifacted_edges)
         cv2.imwrite("Desktop/SWAMIwork/Artifact_Detection/output",img)
 
         return(total_artifacts_percentage,annoyance_score)
