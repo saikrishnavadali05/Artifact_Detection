@@ -8,6 +8,8 @@ block_rows = 8
 block_cols = 8
 horizontal = 1
 verticle = 2
+blockiness_low_threshold = 2
+blockiness_high_threshold = 3
 
 class ArtifactedEdge:
         point1 = None
@@ -25,6 +27,7 @@ def highlight_image_artifacts(img,artifacted_edges):
 
 def compute_overall_annoyance(artifacted_edges):
         annoyance = 0
+        print(artifacted_edges)
         if len(artifacted_edges) != 0:
                 for edge in artifacted_edges:
                         annoyance += edge.annoyance
@@ -50,7 +53,53 @@ def check_blockiness(first_block,second_block,direction):
         total_blockiness = 0
         size = len(first_block)
         blockiness = []
-        #TOBECODED
+        
+        for x in range(0,size):
+                current_blockiness = 0
+                if direction == verticle:
+                        boundary_slope = np.abs(second_block[0][x]-first_block[size-1][x])
+                        if not has_low_pixel_variation(first_block[size-1][x],second_block[0:size-1,x:x+1],boundary_slope)\
+                                or not has_low_pixel_variation(second_block[0][x],first_block[0:size-1,x:x+1],boundary_slope):
+                                return False
+                
+                        first_slope = np.abs(first_block[size-1][x] - first_block[size-2][x])
+                        second_slope = np.abs(second_block[1][x] - second_block[0][x])
+                        current_blockiness = boundary_slope - np.float_(first_slope + second_slope)/2
+
+                if direction == horizontal:
+                        boundary_slope = np.abs(second_block[x][0]-first_block[x][size-1])
+                        if not has_low_pixel_variation(first_block[x][size-1],second_block[x:x+1,0:size-1],boundary_slope)\
+                                or not has_low_pixel_variation(second_block[x][0],first_block[x:x+1,0:size-1],boundary_slope):
+                                return False
+                
+                        first_slope = np.abs(first_block[x][size-1] - first_block[x][size-2])
+                        second_slope = np.abs(second_block[x][1] - second_block[x][0])
+                        current_blockiness = boundary_slope - np.float_(first_slope + second_slope)/2
+
+                if np.greater(blockiness_low_threshold,np.float_(current_blockiness)).all()\
+                        or np.greater(np.float_(current_blockiness),blockiness_high_threshold).all():
+                        return False
+
+                total_blockiness += current_blockiness
+                blockiness.append(current_blockiness)
+        
+        total_blockiness = np.float_(total_blockiness)/np.float_(size)
+
+        for b in blockiness:
+                if np.greater(np.abs(total_blockiness - b),2).any():
+                        return False
+
+        blocked = blockiness_low_threshold <= total_blockiness [0] <= blockiness_high_threshold\
+                        and total_blockiness[1] <= blockiness_high_threshold \
+                        and total_blockiness[2] <= blockiness_high_threshold \
+                        or (blockiness_low_threshold <= total_blockiness[1] <= blockiness_high_threshold\
+                                and total_blockiness[0] <= blockiness_high_threshold\
+                                and total_blockiness[2] <= blockiness_high_threshold)\
+                        or (blockiness_low_threshold <= total_blockiness[2] <= blockiness_high_threshold \
+                                and total_blockiness[0] <= blockiness_high_threshold\
+                                and total_blockiness[1] <= blockiness_high_threshold)
+        
+        return blocked
 
 def get_artifacted_edges(blocks):
         artifacted_edges = []
@@ -81,6 +130,18 @@ def measure_artifacts(img):
         rows,cols,ch = img_array.shape
         blocks = get_image_blocks(img_array)
         artifacted_edges = get_artifacted_edges(blocks)
+
+        annoyance_score = np.average(compute_overall_annoyance(artifacted_edges))
+        print(annoyance_score)
+
+        total_artifacts_percentage = np.float_(len(artifacted_edges))/np.float_(((rows/block_rows)*(cols/block_cols)*2))*100
+        print(total_artifacts_percentage)
+
+        highlight_image_artifacts(img,artifacted_edges)
+        cv2.imwrite("Desktop/SWAMIwork/Artifact_Detection/output",img)
+
+        return(total_artifacts_percentage,annoyance_score)
+
 
 if __name__ == "__main__" :
         img = Image.open('test.jpeg')
