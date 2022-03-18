@@ -1,5 +1,5 @@
 from cv2 import cv2
-
+import logging
 BLOCK_ROWS = 5
 BLOCK_COLS = 5
 
@@ -24,3 +24,8 @@ def compute_overall_annoyance(artifacted_blocks):
         return annoyance / len(artifacted_blocks)
     else:
         return 0
+
+
+def logg(message):
+    logging.basicConfig(format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+    logging.warning(message)
