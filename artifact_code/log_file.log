@@ -1,0 +1,21 @@
+2022-03-19 12:08:22,666 : common_functions  : log_artifact : ERROR : Read the image
+2022-03-19 12:08:22,678 : common_functions  : log_artifact : ERROR : executed get_image_blocks function
+2022-03-19 12:08:22,678 : common_functions  : log_artifact : ERROR : executed get_image_blocks function
+2022-03-19 12:08:23,078 : common_functions  : log_artifact : ERROR : executed compute_blocks_sad function
+2022-03-19 12:08:23,078 : common_functions  : log_artifact : ERROR : executed compute_blocks_sad function
+2022-03-19 12:08:23,078 : common_functions  : log_artifact : ERROR : executed compute_blocks_sad function
+2022-03-19 12:08:23,218 : common_functions  : log_artifact : ERROR : executed check_artifacted_blocks function
+2022-03-19 12:08:23,218 : common_functions  : log_artifact : ERROR : executed check_artifacted_blocks function
+2022-03-19 12:08:23,218 : common_functions  : log_artifact : ERROR : executed check_artifacted_blocks function
+2022-03-19 12:08:23,218 : common_functions  : log_artifact : ERROR : executed check_artifacted_blocks function
+2022-03-19 12:08:23,230 : common_functions  : log_artifact : ERROR : output the values of Annoyance Score and Artifacted Edges
+2022-03-19 12:08:23,230 : common_functions  : log_artifact : ERROR : output the values of Annoyance Score and Artifacted Edges
+2022-03-19 12:08:23,230 : common_functions  : log_artifact : ERROR : output the values of Annoyance Score and Artifacted Edges
+2022-03-19 12:08:23,230 : common_functions  : log_artifact : ERROR : output the values of Annoyance Score and Artifacted Edges
+2022-03-19 12:08:23,230 : common_functions  : log_artifact : ERROR : output the values of Annoyance Score and Artifacted Edges
+2022-03-19 12:08:23,232 : common_functions  : log_artifact : ERROR : writing image into output file
+2022-03-19 12:08:23,232 : common_functions  : log_artifact : ERROR : writing image into output file
+2022-03-19 12:08:23,232 : common_functions  : log_artifact : ERROR : writing image into output file
+2022-03-19 12:08:23,232 : common_functions  : log_artifact : ERROR : writing image into output file
+2022-03-19 12:08:23,232 : common_functions  : log_artifact : ERROR : writing image into output file
+2022-03-19 12:08:23,232 : common_functions  : log_artifact : ERROR : writing image into output file
