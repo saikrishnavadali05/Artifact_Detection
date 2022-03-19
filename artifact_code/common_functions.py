@@ -48,12 +48,10 @@ def conditions_to_satisy_artifact(F_threshold, T_threshold, blocks_sads):
 
 
 def log_artifact(message):
+    logging.basicConfig(filename= r"C:\Users\Vissamsetty Bharath\Downloads\Artifact_Detection-master\logs\log_file_ringing.log", 
+    format='%(asctime)s : %(name)s  : %(funcName)s : %(levelname)s : %(message)s', filemode='w')
     logger = logging.getLogger(__name__)  
     logger.setLevel(logging.WARNING)
-    handler = logging.FileHandler(r'C:\Users\Vissamsetty Bharath\Downloads\Artifact_Detection-master\artifact_code\log_file.log')
-    formatter = logging.Formatter('%(asctime)s : %(name)s  : %(funcName)s : %(levelname)s : %(message)s')
-    handler.setFormatter(formatter)
-    logger.addHandler(handler)
-    logger.error(message)
+    logger.warning(message)
 
 
