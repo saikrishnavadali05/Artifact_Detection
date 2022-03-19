@@ -1,0 +1,6 @@
+2022-03-19 12:40:06,201 : common_functions  : log_artifact : WARNING : Read the image
+2022-03-19 12:40:06,207 : common_functions  : log_artifact : WARNING : executed get_image_blocks function
+2022-03-19 12:40:06,604 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function
+2022-03-19 12:40:06,731 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function
+2022-03-19 12:40:06,731 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges
+2022-03-19 12:40:06,731 : common_functions  : log_artifact : WARNING : writing image into output file
