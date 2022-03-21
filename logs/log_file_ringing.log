@@ -1,6 +1,357 @@
-2022-03-19 12:40:06,201 : common_functions  : log_artifact : WARNING : Read the image
-2022-03-19 12:40:06,207 : common_functions  : log_artifact : WARNING : executed get_image_blocks function
-2022-03-19 12:40:06,604 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function
-2022-03-19 12:40:06,731 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function
-2022-03-19 12:40:06,731 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges
-2022-03-19 12:40:06,731 : common_functions  : log_artifact : WARNING : writing image into output file
+2022-03-20 23:04:09,309 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:04:09,319 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:04:09,830 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:04:10,008 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:04:10,008 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:04:10,008 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:04:10,008 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:07:32,911 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:07:32,923 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:07:33,443 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:07:33,620 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:07:33,620 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:07:33,627 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:07:33,627 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:07:37,453 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:07:37,465 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:07:37,969 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:07:38,148 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:07:38,148 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:07:38,148 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:07:38,148 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:19:30,205 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:19:30,214 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:19:30,731 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:19:30,910 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:19:30,910 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:19:30,918 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:19:30,918 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:26:09,320 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:26:09,321 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:26:09,828 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:26:10,015 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:26:10,015 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:26:10,015 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:26:10,015 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:27:01,667 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:27:01,676 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:27:02,196 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:27:02,376 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:27:02,376 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:27:02,376 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:27:02,376 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:28:10,450 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:28:10,461 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:28:10,988 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:28:11,164 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:28:11,164 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:28:11,167 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:28:11,167 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:31:09,666 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:31:09,680 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:31:10,195 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:31:10,371 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:31:10,371 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:31:10,371 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:31:10,379 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:32:42,513 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:32:42,536 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:32:43,045 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:32:43,222 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:32:43,222 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:32:43,230 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:32:43,230 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:33:06,427 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:33:06,435 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:33:06,950 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:33:07,130 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:33:07,130 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:33:07,130 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:33:07,136 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:33:17,020 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:33:17,035 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:33:17,553 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:33:17,721 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:33:17,721 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:33:17,733 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:33:17,733 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:33:31,924 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:33:31,940 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:33:32,461 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:33:32,641 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:33:32,641 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:33:32,650 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:33:32,650 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:34:10,683 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:34:10,705 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:34:11,213 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:34:11,394 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:34:11,394 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:34:11,398 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:34:11,398 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:34:46,908 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:34:46,918 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:34:47,462 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:34:47,655 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:34:47,655 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:34:47,655 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:34:47,655 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:35:12,850 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:35:13,810 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:36:13,233 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:36:33,835 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:36:33,835 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:36:33,835 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:36:33,835 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:39:22,238 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:39:22,290 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:39:24,863 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:39:25,882 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:39:25,882 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:39:25,890 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:39:25,890 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:44:46,507 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:44:46,526 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:44:46,940 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:44:47,077 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:44:47,077 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:44:47,077 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:44:47,077 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:45:22,367 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:45:22,377 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:45:22,772 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:45:22,916 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:45:22,916 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:45:22,916 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:45:22,916 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:45:37,705 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:45:37,722 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:45:38,122 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:45:38,251 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:45:38,251 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:45:38,263 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:45:38,263 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:51:08,964 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:51:08,974 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:51:09,388 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:51:09,521 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:51:09,521 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:51:09,529 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:51:09,530 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:51:40,440 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:51:40,462 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:51:40,863 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:51:41,007 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:51:41,007 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:51:41,009 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:51:41,009 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:54:30,453 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:54:30,473 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:54:30,858 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:54:30,993 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:54:30,993 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:54:31,003 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:54:31,003 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:55:32,149 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:55:32,160 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:55:32,565 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:55:32,697 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:55:32,697 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:55:32,706 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:55:32,706 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:56:21,954 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:56:21,975 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:56:22,376 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:56:22,516 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:56:22,516 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:56:22,516 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:56:22,516 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-20 23:56:43,613 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-20 23:56:43,633 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-20 23:56:44,172 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-20 23:56:44,310 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-20 23:56:44,310 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-20 23:56:44,310 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-20 23:56:44,310 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 00:10:16,659 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 00:10:16,670 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 00:10:17,075 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 00:10:17,207 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 00:10:17,207 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 00:10:17,215 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 00:10:17,215 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:04:40,365 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:04:40,374 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:04:40,785 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:04:40,924 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:04:40,924 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:04:40,932 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:04:40,932 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:04:49,586 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:04:49,603 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:04:50,007 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:04:50,147 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:04:50,147 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:04:50,147 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:04:50,147 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:24:00,094 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:24:00,101 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:24:00,400 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:24:00,511 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:24:00,511 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:24:00,513 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:24:00,513 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:24:15,004 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:24:15,012 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:24:15,299 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:24:15,393 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:24:15,393 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:24:15,403 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:24:15,403 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:38:49,977 : common_duplicate  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:38:49,984 : common_duplicate  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:38:50,294 : common_duplicate  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:38:50,400 : common_duplicate  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:38:50,400 : common_duplicate  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:38:50,402 : common_duplicate  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:38:50,402 : common_duplicate  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:39:47,282 : common_duplicate  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:39:47,289 : common_duplicate  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:39:47,742 : common_duplicate  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:39:47,944 : common_duplicate  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:39:47,944 : common_duplicate  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:39:47,945 : common_duplicate  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:39:47,945 : common_duplicate  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:41:50,006 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:41:50,015 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:41:50,320 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:41:50,429 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:41:50,430 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:41:50,431 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:41:50,431 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:42:29,872 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:42:29,883 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:42:30,269 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:42:30,401 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:42:30,401 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:42:30,402 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:42:30,403 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:42:45,289 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:42:45,297 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:42:45,733 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:42:45,866 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:42:45,867 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:42:45,868 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:42:45,868 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:43:50,045 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:43:50,052 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:43:50,451 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:43:50,600 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:43:50,600 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:43:50,603 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:43:50,603 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:44:25,706 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:44:25,710 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:44:26,149 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:44:26,276 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:44:26,276 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:44:26,283 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:44:26,283 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:44:56,708 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:44:56,714 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:44:57,109 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:44:57,247 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:44:57,247 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:44:57,248 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:44:57,250 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:45:40,096 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:45:40,102 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:45:40,498 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:45:40,619 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:45:40,619 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:45:40,630 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:45:40,630 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:46:08,103 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:46:08,107 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:46:08,487 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:46:08,627 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:46:08,627 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:46:08,629 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:46:08,629 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:46:39,144 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:46:39,150 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:46:39,527 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:46:39,667 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:46:39,667 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:46:39,673 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:46:39,673 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:48:51,906 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:48:51,913 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:48:52,311 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:48:52,448 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:48:52,448 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:48:52,458 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:48:52,458 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:49:17,202 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:49:17,214 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:49:17,768 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:49:17,906 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:49:17,906 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:49:17,908 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:49:17,908 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:50:03,345 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:50:03,361 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:50:03,960 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:50:04,128 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:50:04,128 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:50:04,130 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:50:04,130 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:53:28,769 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:53:28,774 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:53:29,173 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:53:29,305 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:53:29,306 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:53:29,306 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:53:29,306 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:54:03,752 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:54:03,757 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:54:04,167 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:54:04,320 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:54:04,320 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:54:04,322 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:54:04,322 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:55:04,572 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:55:04,579 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:55:04,961 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:55:05,097 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:55:05,097 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:55:05,100 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:55:05,100 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:55:25,392 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:55:25,397 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:55:25,789 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:55:25,919 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:55:25,919 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:55:25,929 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:55:25,929 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:55:57,364 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:55:57,371 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:55:57,764 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:55:57,912 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:55:57,912 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:55:57,915 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:55:57,915 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:56:28,597 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:56:28,607 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:56:28,993 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:56:29,177 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:56:29,178 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:56:29,179 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:56:29,179 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
+2022-03-21 01:57:08,700 : common_functions  : log_artifact : WARNING : Image has read from source - Step - 1
+2022-03-21 01:57:08,706 : common_functions  : log_artifact : WARNING : executed get_image_blocks function - Step - 2
+2022-03-21 01:57:09,328 : common_functions  : log_artifact : WARNING : executed compute_blocks_sad function - Step - 3
+2022-03-21 01:57:09,457 : common_functions  : log_artifact : WARNING : executed check_artifacted_blocks function - Step - 4
+2022-03-21 01:57:09,457 : common_functions  : log_artifact : WARNING : output the values of Annoyance Score and Artifacted Edges - Step - 5
+2022-03-21 01:57:09,466 : common_functions  : log_artifact : WARNING : artifact is highlighted on image - Step - 6
+2022-03-21 01:57:09,466 : common_functions  : log_artifact : WARNING : writing image into output file - Step - 7
